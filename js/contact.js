@@ -10,12 +10,21 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     const phone = document.getElementById('phone').value;
     const message = document.getElementById('myTextarea').value;
 
+    // Get reCAPTCHA response token
+    const recaptchaResponse = grecaptcha.getResponse();
+    if (!recaptchaResponse) {
+        alert('Please complete the reCAPTCHA');
+        submitButton.classList.remove('loading');
+        return;
+    }
+
     // Prepare API request payload as JSON
     const payload = {
         email: email,
         phone: phone,
         name: name,
-        notes: message
+        notes: message,
+        recaptcha_response: recaptchaResponse // Include the reCAPTCHA response token
     };
 
     // Send data to the API

@@ -15,7 +15,10 @@
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <link rel="stylesheet" href="css/main.css">
+    <!-- Add the reCAPTCHA script to your HTML head -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <title>Nile Icons</title>
+
 </head>
 <body>
     <!-- header + nav + main -->
@@ -282,7 +285,7 @@
         </div>
     </section>
     <!-- contact -->
-    <section class="contact" id="contact">
+    <!-- <section class="contact" id="contact">
         <div class="container">
             <div class="content">
                 <div class="left-side" data-aos="fade-right" data-aos-duration="800">
@@ -333,7 +336,43 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+    <!-- Contact Form -->
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="content">
+            <div class="left-side" data-aos="fade-right" data-aos-duration="800">
+                <!-- Address, Phone, Email sections (same as before) -->
+            </div>
+            
+            <div class="right-side" data-aos="fade-left" data-aos-duration="800">
+                <div class="topic-text" data-aos="zoom-in" data-aos-duration="600">Send us a message</div>
+                <form id="contactForm" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="input-box">
+                        <input type="text" placeholder="Enter your name" id="name" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" placeholder="Enter your email" id="email" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="number" placeholder="Enter your phone number" id="phone" required>
+                    </div>
+                    <div class="input-box message-box">
+                        <textarea name="myTextarea" id="myTextarea" placeholder="Enter your message" required></textarea>
+                    </div>
+
+                    <!-- Add reCAPTCHA widget here -->
+                    <div class="g-recaptcha" data-sitekey="6LcgT4UqAAAAAFzyx5y1xEk7BtGrxbLuhD9JFmM9"></div>
+
+                    <div class="button">
+                        <input type="submit" value="Send Now" id="submitButton">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
     <!-- Confirmation Message Modal -->
     <div class="confirmBox" id="confirmationBox" style="display: none;">
         <p>Thank you! We will contact you soon.</p>
