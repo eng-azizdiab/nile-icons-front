@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/top.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/article.css">
+    <title>Article  1</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav id="nav">
+                    <div class="nav-container">
+                        <div class="logo"><a href="../index.html"><img src="../images/logoLight.png" alt="logo"></a></div>
+                        <ul class="flex flexCC" id="links">
+                            <li><a href="../index.html" >Home</a></li>
+                            <li><a href="../index.html#about">About us</a></li>
+                            <li><a href="../index.html#partners">Partners</a></li>
+                            <li class="dropdown">
+                                <a href="../index.html#ourSolutions" >Solutions <i class="fa-solid fa-angle-down" style="color: #ffffff;"></i></a>
+                                <ul class="dropdown-menu" >
+                                    <li class="dropdown">
+                                        <a href="../pages/C.html">Command & control <i class="fa-solid fa-angle-right" style="color: #003361; margin-left:20px;"></i></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="../pages/C.html#ControlSuite">Control suite</a></li>
+                                            <li><a href="../pages/C.html#ControlRoom">Control Room</a></li>
+                                            <li><a href="../pages/C.html#CrisisRoom">Crisis Room</a></li>
+                                            <li><a href="../pages/C.html#MeetingRoom">Meeting Room</a></li>
+                                            <li><a href="../pages/C.html#ExecutiveRoom">Executive Room</a></li>
+                                            <li><a href="../pages/C.html#WarRoom">War Room</a></li>
+                                            <li><a href="../pages/C.html#Media">Media command centre</a></li>
+                                            <li><a href="../pages/C.html#MeetingPOD">Meeting POD</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="../pages/M.html">Marketing solutions <i class="fa-solid fa-angle-right" style="color: #003361; margin-left:20px;"></i></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="../pages/M.html#center">In-Center Marketing</a></li>
+                                            <li><a href="../pages/M.html#store">Centre, store window Marketing</a></li>
+                                            <li><a href="../pages/M.html#around">Around stores Marketing</a></li>
+                                            <li><a href="../pages/M.html#outdoor">Outdoor Marketing</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="../pages/S.html">Physical security</a></li>
+                                    <li><a href="../pages/NI.html">Network & Infrastructure</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../pages/services.html" >Services</a></li>
+                            <li class="dropdown" >
+                                <a id="homeLink">Inspiration <i class="fa-solid fa-angle-down" style="color: #ffffff;"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a  href="../pages/articles.html">News & Insights</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../index.html#contact">Contact us</a></li>
+                
+                        </ul>
+                        <div id="mobile-bar">
+                            <i class="fa-solid fa-bars" id="open"></i> 
+                        </div>
+                    </div>
+            </nav>
+        </div>
+    </header>
+    <!-- navigation -->
+    <main>
+        <div class="container">
+            <ul>
+                <li><a href="../index.html">Home</a><i class="fa-solid fa-angle-right" style="color: #000000; font-size:12px;"></i></li>
+                <li><a href="../pages/articles.html">Inspiration</a><i class="fa-solid fa-angle-right" style="color: #000000; font-size:12px;"></i></li>
+                <li><a href="../pages/articles.html">News & Insights</a><i class="fa-solid fa-angle-right" style="color: #000000; font-size:12px;"></i></li>
+                <li id="topTitle">title</li>
+            </ul>
+        </div>
+    </main>
+    <!-- image -->
+    <section class="articleImage ">
+        <img id="articleImage"alt="Article Image">
+    </section>
+    <!-- head of article -->
+    <section class="headOfArticle">
+        <div class="container">
+            <div class="head-container">
+                <div class="top">
+                    <h6 id="timeView"></h6>
+                    <div class="social">
+                        <button onclick="shareOnFacebook()"><i class="fab fa-facebook-f"></i></button>
+                        <button onclick="shareOnTwitter()"><i class="fa-brands fa-x-twitter"></i></button>
+                        <button onclick="shareOnLinkedIn()"><i class="fab fa-linkedin-in"></i></button>
+                    </div>
+                </div>
+                <h2 id="firstDescription">first description</h2>
+                <h6 id="time"></h6>
+            </div>
+        </div>
+    </section>
+    <!-- subArt -->
+    <div id="subArticle-container">
+        <!-- articles  -->
+    </div>
+
+    <section class="related" id="relatedArticle">
+        <div class="container">
+            <h2>Related articles</h2>
+            <div class="articles-container" id="articles-container">
+                <div class="articles-container">
+                    <div class="article" onclick="goTo()">
+                        <div class="img"><img src="../images/article.png" alt="${article.title}"></div>
+                        <div class="info">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, consequatur!</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer>
+        <div class="footer-container">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html#about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="../pages/services.html"><i class="fa-solid fa-laptop-file"></i> Services</a></li>
+                        <li><a href="../index.html#ourSolutions"><i class="fa-solid fa-house-chimney-user"></i> Our Solutions</a></li>
+                        <li><a href="../pages/articles.html"><i class="fas fa-file-contract"></i> News & Insights</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact info</h3>
+                    <ul>
+                        <li>
+                            <a href="https://www.google.com/maps/place/29%C2%B059'31.1%22N+31%C2%B025'55.4%22E/@29.991975,31.432057,17z/data=!3m1!4b1!4m4!3m3!8m2!3d29.991975!4d31.432057?entry=ttu&g_ep=EgoyMDI0MDkwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Arabella Plaza, Gamal Abdel-Naser St.<br>
+                                Building no.3
+                                , New Cairo 3, Cairo Governorate
+                            </a>
+                        </li>
+    
+                        <li><a><i class="fas fa-mobile-alt"></i>  010 20051 473</li></a>
+                        <li><a><i class="fa-solid fa-envelope"></i> info@nileicons.com</li></a>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" target="https://www.linkedin.com/company/nileicons/"aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="newsletter">
+                        <h4>Send us a message now</h4>
+                        <a href="../index.html#contact" class="newsletterbtn">Contact us </a>
+                    </div>
+                </div>
+        </div>
+        <div class="footer-bottom">
+                <p>&copy; 2024 Nile Icons Company, All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- special -->
+    <div class="up" id="upBtn"><i class="fa-solid fa-caret-up fa-bounce"></i></div>
+    <!-- mobile menu -->
+    <div class="mobile-menu flex flexCC" id="mobile-menu">
+        <ul class="flex flexCC" id="links">
+            <li><a  href="../index.html">Home</a></li>
+            <li><a  href="../index.html#about">About us</a></li>
+            <li><a  href="../index.html#partners">Partners</a></li>
+            <li><a  href="../index.html#ourSolutions">Solutions</a></li>
+            <li><a class="activeM"  href="../pages/articles.html">Inspiration</a></li>
+            <li><a href="../pages/services.html">Services</a></li>
+            <li><a href="../index.html#contact">Contact us</a></li>
+        </ul>
+    </div>
+        
+        <script>
+                document.getElementById('mobile-bar').addEventListener('click', () => {
+                    document.getElementById('mobile-menu').classList.toggle('activeMenu');
+                });
+                function goTo() {
+                    window.location.href = `article.html`;
+                }
+
+
+        </script>
+    <script src="../js/all.min.js"></script>
+    <script src="../js/SingleArticle.js"></script>
+</body>
+</html>

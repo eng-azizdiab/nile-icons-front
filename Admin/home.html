@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="images/top.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="logo">
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="home.html" class="activeLink">Home</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                    <li><a href="partners.html">Partners</a></li>
+                    <li><a href="references.html">References</a></li>
+                    <li><a href="messages.html">Messages</a></li>
+                    <li><a href="newAdmin.html">Admins</a></li>
+                    <li onclick="logout()"><a href="index.html">Logout</a></li>
+                </ul>
+            </nav>
+            <div id="mobile-bar">
+                <i class="fa-solid fa-bars" id="open"></i>
+            </div>
+        </div>
+    </header>
+    <section class="home">
+        <aside id="asideHome">
+            <div class="avater">
+                <div class="img"><img src="images/download.png" alt="admin_avater"></div>
+                <h6 id="adminName"></h6>
+                <h6 id='adminRole'></h6>
+            </div>
+            <ul>
+                <li><i class="fa-solid fa-house"></i><a href="home.html">Home</a></li>
+                <li><i class="fa-solid fa-newspaper"></i><a href="articles.html">Articles</a></li>
+                <li><i class="fa-regular fa-handshake"></i><a href="partners.html">Partners</a></li>
+                <li><i class="fa-solid fa-circle-info"></i><a href="references.html">References</a></li>
+                <li><i class="fa-solid fa-message"></i><a href="messages.html">Messages</a></li>
+                <li><i class="fa-solid fa-user-tie"></i><a href="newAdmin.html">Admins</a></li>
+                <li onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i><a href="index.html">Logout</a></li>
+            </ul>
+        </aside>
+        <main>
+            <div class="container">
+                <div class="welcome">
+                    <h2>Welcome Back👋</h2>
+                    <p>The Admin Dashboard lets you manage your website easily. You can add, edit, or delete articles, manage partners and references, and check messages sent through the "Contact Us" form. You’ll also find important information about your site’s performance to help you stay updated and in control.</p>
+                </div>
+                <div class="boxes-info">
+                    <div class="box">
+                        <div class="head">
+                            <i class="fa-solid fa-newspaper"></i>
+                            <h6>Articles</h6>
+                        </div>
+                        <h6 id="articlesCount"></h6>
+                    </div>
+                    <div class="box">
+                        <div class="head">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <h6>Categories</h6>
+                        </div>
+                        <h6 id="catCount"></h6>
+                    </div>
+                    <!-- <div class="box">
+                        <div class="head">
+                            <i class="fa-regular fa-handshake"></i>
+                            <h6>Partners</h6>
+                        </div>
+                        <h6 id="partnersCount">12</h6>
+                    </div> -->
+                    <div class="box">
+                        <div class="head">
+                            <i class="fa-regular fa-message"></i>
+                            <h6>Messages</h6>
+                        </div>
+                        <h6 id="messagesCount"></h6>
+                    </div>
+                    <div class="box">
+                        <div class="head">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <h6>Admins</h6>
+                        </div>
+                        <h6 id="adminsCount"></h6>
+                    </div>
+                    <div class="box">
+                        <div class="head">
+                            <i class="fa-solid fa-laptop"></i>
+                            <h6>Visitors</h6>
+                        </div>
+                        <h6 id="visitorsCount"></h6>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </section>
+    <!-- to up  -->
+    <div class="toUP" id="toUp"><i class="fa-solid fa-caret-up fa-bounce"></i></div>
+    <!-- mobile-menu -->
+    <div class="mobile-menu hidden" id="mobile-menu">
+        <ul>
+            <li><a href="home.html" class="activeLink">Home</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="partners.html">Partners</a></li>
+            <li><a href="references.html">References</a></li>
+            <li><a href="messages.html">Messages</a></li>
+            <li><a href="newAdmin.html">Admins</a></li>
+            <li onclick="logout()"><a href="index.html">Logout</a></li>
+        </ul>
+    </div>
+    <!-- delete alert -->
+    <div class="delete-alert">
+        <p>Are You Sure To Delete This Article ?</p>
+        <div class="options">
+            <button class="btn">Yes</button>
+            <button class="btn">No</button>
+        </div>
+    </div>
+
+    <script>
+        // Check if the auth token exists in session storage
+        const authToken = sessionStorage.getItem('userToken');
+        
+        if (!authToken) {
+            // If no token is found, redirect to login page
+            window.location.href = 'index.html';
+        }
+    </script>
+    
+    
+    <script src="js/all.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>

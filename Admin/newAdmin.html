@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="images/top.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <title>Admins</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="logo">
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                    <li><a href="partners.html">Partners</a></li>
+                    <li><a href="references.html">References</a></li>
+                    <li><a href="messages.html">Messages</a></li>
+                    <li><a href="newAdmin.html" class="activeLink">Admins</a></li>
+                    <li onclick="logout()"><a href="index.html">Logout</a></li>
+                </ul>
+            </nav>
+            <div id="mobile-bar">
+                <i class="fa-solid fa-bars" id="open"></i>
+            </div>
+        </div>
+    </header>
+    <section class="info">
+        <div class="form container">
+            <h2>Add new admin </h2>
+            <input type="text" placeholder="Admin name" id="adminName"  autocomplete="off">
+            <input type="text" placeholder="Email" id="adminEmail"  autocomplete="off">
+            <input type="password" placeholder="Password At Least 8 characters" id="adminPassword"  autocomplete="off">
+            <div class="alert">
+                <p id="adminAlertBox">Please Fill all inputs </p>
+            </div>
+            <button class="btn add" id="addAdminBtn">Add</button>
+        </div>
+    </section>
+    <section class="data">
+        <div class="container">
+            <h2>Admins List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Admin</th>
+                        <th>Role</th>
+                        <th>Email</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+                <tbody id="adminData">
+                    <!-- data will be here  -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <div class="block" id="block">
+        <h2>Sorry you dont have access on this page !</h2>
+        <p>Only supper admin can access  admins setting</p>
+    </div>
+    <div class="takeNewPassword" id="changeView">
+        <input type="text" placeholder="New password" id="newpassword">
+        <button class="btn" id="doneChange">Done</button>
+    </div>
+    <div class="blockback" id="blockback"></div>
+    <!-- to up  -->
+    <div class="toUP" id="toUp"><i class="fa-solid fa-caret-up fa-bounce"></i></div>
+    <!-- mobile-menu -->
+    <div class="mobile-menu hidden" id="mobile-menu">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="partners.html">Partners</a></li>
+            <li><a href="references.html">References</a></li>
+            <li><a href="messages.html">Messages</a></li>
+            <li><a href="newAdmin.html"  class="activeLink">Admins</a></li>
+            <li onclick="logout()"><a href="index.html">Logout</a></li>
+        </ul>
+    </div>
+    <!-- delete alert -->
+    <div class="delete-alert">
+        <p>Are You Sure To Delete This Article ?</p>
+        <div class="options">
+            <button class="btn">Yes</button>
+            <button class="btn">No</button>
+        </div>
+    </div>
+    
+    <script>
+        // Check if the auth token exists in session storage
+        const authToken = sessionStorage.getItem('userToken');
+        
+        if (!authToken) {
+            // If no token is found, redirect to login page
+            window.location.href = 'index.html';
+        }
+    </script>
+    <script src="js/all.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/admin.js"></script>
+</body> 
+</html>
